@@ -1,4 +1,4 @@
-package SangRok_MacBook.src.noDate;
+package noDate;
 
 public class Friend {
 

@@ -1,0 +1,11 @@
+package test;
+
+public class aS {
+
+	
+	public static void main(String[] args)
+	{
+		aStudent s1 = new aStudent();
+		aStudent s2 = new aStudent("22-0309", "c++", "sasuke");
+	}
+}

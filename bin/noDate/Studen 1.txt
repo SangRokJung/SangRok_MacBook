@@ -1,0 +1,120 @@
+package test;
+
+public class Student {
+	
+	//데이터, 생성자, 오버로드 생성자, 메인메소드 할당, 디버깅, 메모리맵 그리기
+	
+	
+		//데이터 = 학번, 학과, 이름, 과목성적(5과목)
+		
+		private String id;                //학번
+		private String major;             //학과  
+		private String name;              //이름
+		private float[] record;           //과목성적
+		
+		
+		//생성자
+		Student()
+		{
+			System.out.println("Student 기본 생성자 (default conestructor)");
+			id = "22-0308"; //sugarcode -->> id = new String ("22-0308");
+			major = "java";
+			name = "James";
+			record = new float[5];	
+		
+		}
+		
+		Student(String id, String major, String name)
+		{
+			System.out.println("Student 생성자 (overloaded conestructor)");
+			this.id = id;
+			this.major = major;
+			this.name = name;
+			record = new float[5];	
+		}
+		
+		
+		//이름 셋팅 set
+		public void SetName(String name)
+		{
+			this.name = name;
+		}
+		//이름 변경 get
+		public String name()
+		{
+			return this.name;
+		}
+		
+		//학번 셋팅 set
+		public void Setid(String id)
+		{
+			this.id = id;
+		}
+		//학번 변경 get
+		public String id()
+		{
+			return this.id;
+		}
+		
+		
+		//학과 셋팅 set
+		public void major(String major)
+		{
+			this.major = major;
+		}
+		//학과 변경 get
+		public String major()
+		{
+			return this.major;
+		}
+		
+		
+		
+		//과목 성적 셋 기능 
+		private float[] RecordSet()
+		{	
+			float max = 4.5f;
+			float min = 0;
+			
+			for (int i = 0; i < record.length; i++)
+			{
+				record[i] = (float)(Math.random() * max) + min;
+				System.out.println(record[i]);
+			
+				return record[i];
+			}
+		
+		}	
+		
+		
+		
+		
+		//과목 성적 출력 기능  
+		public float[] RecordCheck()
+		{
+			for (int i = 0; i < record.length; i++)
+			{
+				return record[i];
+			}
+			
+		}
+		
+	
+		
+		//성적 평균 산출 기능
+		private float[] RecordAv()
+		{
+			float val = 0; //총
+			for (int i = 0; i < record.length; i++)
+			{
+				record[i] = record[i] + record[i+1];
+				val = record[i];
+				
+				
+			}
+			val = record[5] / 5;
+			return val;
+		}
+
+}
+

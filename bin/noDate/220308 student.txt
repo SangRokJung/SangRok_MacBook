@@ -1,0 +1,130 @@
+package test;
+
+import java.util.Random; 
+
+public class Student {
+
+	Random Random = new Random();
+	
+	/*
+	Student 클래스를 작성하시오
+	학번, 학과, 이름, 과목성적 데이터를 가진다.
+	과목은 5과목이며 과목이 증가되거나 감소될 수 있다.(과목명은 정하지 않음)
+	성적은 0.0~4.5사이 값이다..
+	성적을 출력하는 기능이 필요하다.@@@@
+	성적 평균을 구하는 기능이 필요하다. @@@@
+	학번, 학과, 과목성적, 이름의 Getter, Setter가 필요하다 @@@@
+
+	Student클래스를 단일 연결 리스트 형태로 구성하시오.
+	*/
+	
+	public Student()
+	{
+		System.out.println("Student 기본 생성자 (default conestructor)");
+		name = "luna"; //이름
+		class_of = 220308; //학번
+		department = "Department_of_Artificial_Intelligence"; //학과
+		SG[0] = 0.0f; //과목성적
+		SG[1] = 0.0f;
+		SG[2] = 0.0f;
+		SG[3] = 0.0f;
+		SG[4] = 0.0f; //과목성적
+	}
+	
+	Student (String name, int balance)
+	{
+		System.out.println("Student  생성자 (overladed conestructor)");
+		this.name = "LA"; //이름
+		this.class_of = 220308; //학번
+		this.department = "Department_of_Artificial_Intelligence"; //학과
+		this.SG[0] = 0.0f; //과목성적
+		this.SG[1] = 0.0f;
+		this.SG[2] = 0.0f;
+		this.SG[3] = 0.0f;
+		this.SG[4] = 0.0f; //과목성적
+	}
+	
+	
+	//데이터
+	private int class_of; //학번
+	private String department; //학과
+	private String name; //이름
+	private float[] SG = new float[5];  //과목성적
+	
+	
+	//성적 입력
+	
+	for (int i = 0; i < SG.length; i++)
+	{
+		SG[i] = Random.nextInt(4.5);
+	}
+	
+	
+	
+	
+	
+	
+	//학번, 학과, 이름, 과목성적의 getter, setter
+	
+	//1. 이름
+	//이름 바꾸기
+	//getter
+	public void getName(String name)
+	{
+		this.name = name;
+	}
+	//이름 만들기
+	//setter
+	public String setName()
+	{
+		return this.name;
+	}
+	
+	
+	//2. 학번
+	//학번 바꾸기
+	//getter
+	public void getClassof(int class_of)
+	{
+		this.class_of = class_of;
+	}
+	//학번 만들기
+	//setter
+	public String setClassof()
+	{
+		return this.class_of;
+	}	
+
+	
+	//3. 학과
+	//학과 바꾸기
+	//getter
+	public void getDPT(String department)
+	{
+		this.department = department;
+	}
+	//학과 만들기
+	//setter
+	public String department()
+	{
+		return this.department;
+	}		
+	
+	
+	
+	
+	
+	//성적 출력 기능 메소드
+	System.out.println ()
+	for (int i = 0; i < SG.length; i++)
+	{
+		SG[i] = 
+	}
+
+	
+	
+	//성적 평균 구하는 기능 메소드
+	
+	
+	//
+}

@@ -1,5 +1,4 @@
-package SangRok_MacBook.src.noDate;
-
+package noDate;
 public class HobbyFriend extends Friend {
 
 	String hobby;

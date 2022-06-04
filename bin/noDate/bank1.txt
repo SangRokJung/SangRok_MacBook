@@ -1,0 +1,70 @@
+package test;
+
+public class bank_acount {
+	
+	//Attribute
+	//소유자, 계좌번호, 잔액정보
+
+	bank_acount()
+	{
+		System.out.println("bank_acount 기본 생성자 (default conestructor)");
+		name = "rok"; 
+		number = 0;
+		balance = 0;
+	}
+	
+	bank_acount(String name, int balance)
+	{
+		System.out.println("bank_acount 생성자 (overladed conestructor)");
+		this.name = name;
+		this.balance = balance;
+	}
+	//this = 이 클래스의 name
+	
+	private String name; 
+	private int number;
+	private int balance;
+	
+	//이름 바꾸기
+	//getter
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+	//이름 만들기
+	//setter
+	public String setName()
+	{
+		return this.name;
+	}
+	
+	//Method
+	//입금메소드
+	boolean deposit(int money)
+	{
+		balance = balance + money;
+		return true;
+	}
+	//출금메소드
+	boolean withdraw(int money)
+	{
+		if (balance >= money)
+		{
+			balance = balance - money;
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	//조회메소드
+	int check()
+	{
+		return balance;
+	}
+	
+	
+	
+	
+}
