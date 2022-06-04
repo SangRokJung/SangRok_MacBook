@@ -1,0 +1,131 @@
+package test;
+
+public class pyong {
+
+	public static void main(String[] args)
+	{
+		// 1. 성적을 메모리에 저장한다.
+		
+		
+		//int[][] sc = new int[6][3];
+		int[][] sc = new int[][]
+		{
+			{78, 78, 77},
+			{55, 56, 88},
+			{78, 95, 74},
+			{60, 90, 93},
+			{99, 33, 57},
+			{77, 66, 80},
+		};
+		
+		int total_kor = 0; //국어 총점
+		float avg_kor = 0; //국어 평균
+		int total_eng = 0; //영어 총점
+		float avg_eng = 0; //영어 평균
+		int total_mth = 0; //수학 총점
+		float avg_mth = 0; //수학 평균
+		
+		int total_11 = 0; //1학년 1학기 총점
+		int total_12 = 0; //1학년 2학기 총점
+		
+		int total_21 = 0; //2학년 1학기 총점
+		int total_22 = 0; //2학년 2학기 총점
+		
+		int total_31 = 0; //3학년 1학기 총점
+		int total_32 = 0; //3학년 2학기 총점 
+		
+		int[] tt = new int[6];
+		// 2. 과목별 학년평균을 구한다.
+		// 2-1. 국어 평균을 구한다.
+		/*
+		sc[0][0] + 
+		sc[1][0] + 
+		sc[2][0] +
+		sc[3][0] +
+		sc[4][0] +
+		sc[5][0] +
+		*/
+		
+		for (int i = 0; i < sc.length; i++)
+		{
+			total_kor = total_kor + sc[i][0];
+		}
+		avg_kor = total_kor / 6.0f;
+		System.out.println("국어 평균 = " + avg_kor + "점");
+		
+		
+		// 2-2. 영어 평균을 구한다.
+		/*
+		sc[0][1] + 
+		sc[1][1] + 
+		sc[2][1] +
+		sc[3][1] +
+		sc[4][1] +
+		sc[5][1] +
+		*/
+		
+		for (int i = 0; i < sc.length; i++)
+		{
+			total_eng = total_eng + sc[i][1];
+		}
+		avg_eng = total_eng / 6.0f;
+		System.out.println("영어 평균 = " + avg_eng + "점");
+		
+		
+		// 2-3. 수학 평균을 구한다.
+		/*
+		sc[0][2] + 
+		sc[1][2] + 
+		sc[2][2] +
+		sc[3][2] +
+		sc[4][2] +
+		sc[5][2] +
+		*/
+		for (int i = 0; i < sc.length; i++)
+		{
+			total_mth = total_mth + sc[i][2];
+		}
+		avg_mth = total_mth / 6.0f;
+		System.out.println("수학 평균 = " + avg_mth + "점");
+		
+		
+		
+		
+		
+		// 3. 학기별 평균을 구한다.
+		
+		// 3-1. 1학년 1학기 평균을 구한다.
+		for (int i = 0; i < sc[0].length; i++)
+		{
+			total_11 = total_11 + sc[0][i];
+		}
+		
+		// 3-2. 1학년 2학기평균을 구한다.
+		for (int i = 0; i < sc[1].length; i++)
+		{
+			total_11 = total_11 + sc[1][i];
+		}
+		// 3-3. 3학년 평균을 구한다.
+		
+		
+		// 배열버전 학기별 평균
+	
+		for (int i = 0; i < sc.length; i++)
+		{
+			//평균을 구한다.
+			for (int j = 0; j < sc[0].length; j++)
+			{
+				tt[i] = tt[i] + sc[i][j];
+			}
+			
+		}
+		for (int i = 0; i < sc.length; i++)
+		{
+			System.out.println (tt[i] / 3);
+		}
+		
+	}
+		
+		
+	
+}

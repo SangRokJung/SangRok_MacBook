@@ -1,0 +1,20 @@
+package test;
+
+public class helloba {
+
+	public static void main (String[] args)
+	{
+		bank_acount ba = new bank_acount();
+		bank_acount ba1 = new bank_acount("정상록", 100000);
+		
+		ba.deposit(1000);
+		System.out.println(ba.check());
+		System.out.println(ba1.check());
+		
+		
+		
+	}
+	
+	
+	
+}

@@ -1,0 +1,62 @@
+package test;
+
+public class random {
+
+	
+	
+	
+	
+	public static void main(String[] args)
+	{
+		// 1. 배열을 할당하고 랜덤값 (0~12)으로 설정한다.
+		// 2. 배열에 0~12의 숫자가 있는지 확인한다.
+		
+		int[] arRandom = new int[30];
+		int[] look = new int[13]; //0~12 숫자
+		
+		for (int i = 0; i < arRandom.length; i++)
+		{
+			arRandom[i] = (int)(Math.random() * 13);
+			
+			for (int j = 0; j < look.length; j++)
+			{
+				if (arRandom[i] == j)
+					look[j] = look[j] + 1;
+				else
+				{
+					
+				}
+			}
+				
+			
+		}
+
+			for (int i = 0; i < look.length; i++)
+			{
+				System.out.println(i + " -> " + look[i]);
+			}
+			
+			
+			int count = 0;
+			for (int i = 0; i < look.length; i++)
+			{
+				if (look[i] == 0)
+				{
+					System.out.println("빠진수 = " + i);
+					count = count + 1;
+				}
+			}	
+					
+			
+			
+			if (count == 0)
+			System.out.println("모든 수 가 존재한다.");
+			else
+			{
+				System.out.println("모든 수 가 존재하지않는다.");
+			}
+			
+		
+		
+	}
+}
